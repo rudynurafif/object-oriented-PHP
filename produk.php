@@ -1,7 +1,7 @@
 <?php 
   echo "<pre>";
 
-  // CARA MEMBUAT PROPERTY DAN METHOD (PAKAI ACCESIBILITY DIDEPANNYA)
+  // CARA MEMBUAT PROPERTY DAN METHOD (PAKAI ACCESIBILITY DIDEPANNYA, bisa public, protected atau private)
 
   class Produk {
     public $judul = "judul", // ini membuat property
@@ -9,14 +9,13 @@
            $penerbit = "penerbit",
            $harga = 0;
     
-    public function getLabel() { // ini method
+    public function getLabel() { // ini method (function didalam class)
       return "$this->penulis, $this->penerbit";
     }
   }
 
   // $produk1 = new Produk();
   // $produk1->judul = "One Piece";
-  
   // var_dump($produk1);
   
   // $produk2 = new Produk();
@@ -40,6 +39,4 @@
   echo "<br>";
   echo "Game : " . $produk4->getLabel();
 
-
-  
 ?>

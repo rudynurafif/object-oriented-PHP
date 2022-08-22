@@ -29,7 +29,7 @@
       $this->penulis = $penulis;
     }
 
-    public function getPenulis() { // getter
+    public function getPenulis() {
       return $this->penulis;
     }
 
@@ -114,7 +114,7 @@
   echo $produk2->getHarga();
   echo "<hr>";
 
-  $produk1->setPenulis("Rudy");
+  $produk1->setPenulis("Rudy Nurafif");
   echo $produk1->getPenulis();
 
 

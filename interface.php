@@ -1,12 +1,26 @@
 <?php 
   echo "<pre>";
 
+
+  /*
+  INTERFACE
+  - Kelas abstrak yang tidak memiliki implementasi
+  - Murni merupakan template untuk kelas turunannya
+  - Tidak boleh memiliki property, hanya deklarasi method (function) saja
+  - Semua methodnya harus dideklarasikan dgn visibility public
+  - Boleh mendeklarasikan __construct() di dalamnya
+  - Satu kelas (turunan) boleh mengimplementasikan banyak interface
+  - Dengan menggunakan type-hinting, dapat melakukan 'dependency injection' (konsep object type)
+  - Pada akhirnya akan mencapai Polymorphism
+  
+  */
+
   // kelas interface tidak bisa diinstansiasi
   interface InfoProduk { // kelas interface, tidak boleh memiliki property
-    public function getInfoProduk(); // ini deklarasi method, harus public
+    public function getInfoProduk(); // ini deklarasi method, tanpa implementasi (hanya template), visibility public
   }
 
-  Abstract class Produk {
+  abstract class Produk {
     protected $judul, // ini membuat property
            $penulis,
            $penerbit,

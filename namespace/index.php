@@ -13,6 +13,7 @@ require_once 'App/init.php';
 // penulisan lengkap namespace
 // namespace Vendor\Namespace\SubNamespace;
 
+// membuat alias, namespace yang mana sebagai apa
 use App\Service\User as ServiceUser;
 use App\Produk\User as ProdukUser;
 

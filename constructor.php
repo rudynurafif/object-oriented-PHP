@@ -1,11 +1,14 @@
 <?php 
   echo "<pre>";
+  
   class Produk {
     public $judul, // ini membuat property
            $penulis,
            $penerbit,
            $harga;
     
+    // constructor, method spesial, method yang otomatis dijalankan, ketika class diinstansiasi (dibuat objek)
+    // method atau function yang memiliki __ di depannya karna merupakan method spesial yang dimiliki PHP
     public function __construct($judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0) {
       $this->judul = $judul;
       $this->penulis = $penulis;

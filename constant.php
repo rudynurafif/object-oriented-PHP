@@ -1,12 +1,16 @@
 <?php 
 
+  // Constanta
+  // define(name, value) && const
+
+
   // // define(name, value)
-  // define('NAMA', "Rudy Nurafif"); // tidak bisa disimpan didalam kelas
+  // define('NAMA', "Rudy Nurafif"); // tidak bisa disimpan didalam block kelas dan konsep OOP
   // echo NAMA;
 
   // echo "<br>";
 
-  // const UMUR = 23; // bisa didalam kelas, bisa digunakan dalam konsep OOP
+  // const UMUR = 23; // bisa disimpan didalam block kelas, bisa juga digunakan dalam konsep OOP
   // echo UMUR;
 
   // class Coba {
@@ -15,20 +19,22 @@
 
   // echo Coba::NAMA;
 
+  // Terdapat beberapa Magic Constant di PHP
+
   // echo __LINE__; // Menampilkan baris dimana magic const ini ditulis
   
-    // function Coba() {
-    //   return __FUNCTION__;
-    // }
-    // echo Coba();
+  // function coba() {
+  //   return __FUNCTION__; // sedang berada di function apa
+  // }
+  // echo coba(); // coba
 
-    echo __FILE__;
-    echo "<br>";
+  echo __FILE__; // lokasi file
+  echo "<br>";
 
-    class Coba {
-      public $kelas = __CLASS__;
-    }
+  class Coba {
+    public $kelas = __CLASS__; // sedang berada di
+  }
 
-    $obj = new Coba;
-    echo $obj->kelas;
+  $obj = new Coba;
+  echo $obj->kelas; // Coba
 ?>

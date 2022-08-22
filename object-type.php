@@ -1,5 +1,6 @@
 <?php 
   echo "<pre>";
+
   class Produk {
     public $judul, // ini membuat property
            $penulis,
@@ -19,7 +20,7 @@
   }
 
   class CetakInfoProduk { // kelas ini hanya bertugas untuk mencetak info
-    public function cetak(Produk $produk) {
+    public function cetak(Produk $produk) { // konsep object type, menggunakan object sbg parameter suatu method
       $str = "{$produk->judul} | {$produk->getLabel()} (Rp. {$produk->harga})";
       return $str;
     }

@@ -1,6 +1,17 @@
 <?php 
   // echo "<pre>";
-  abstract class Produk {
+
+  /*
+  
+  ABSTRACT CLASS
+  - Sebuah kelas yang tidak dapat diinstansiasi, atau dibuat objek
+  - Mendefinisikan interface untuk kelas lain yang menjadi turunannya
+  - Berperan sebagai kerangka dasar untuk kelas turunannya
+  - Kelas abstrak minimal memiliki 1 method abstrak (interface), interface tsbt dijadikan sbg kerangka dasar untuk kelas turunannya
+
+  */
+
+  abstract class Produk { // kelas abstrak
     private $judul, // ini membuat property
            $penulis,
            $penerbit,
@@ -15,7 +26,7 @@
     }
 
     public function setJudul($judul) { // setter
-      // if (!is_string($judul)) {
+      // if (!is_string($judul)) { // validasi, salah satu contoh apa yang bisa dilakukan pada fungsi setter
       //   throw new Exception("Judul harus string");
       // }
       $this->judul = $judul;
@@ -69,6 +80,7 @@
     }
   }
 
+
   class Komik extends Produk {
     public $jmlHalaman;
 
@@ -82,6 +94,7 @@
       return $str;
     }
   }
+
 
   class Game extends Produk {
     public $waktuMain;
@@ -97,11 +110,12 @@
     }
   }
 
+
   class CetakInfoProduk {
     public $daftarProduk = [];
 
     public function tambahProduk(Produk $produk) {
-      $this->daftarProduk[] = $produk;
+      $this->daftarProduk[] = $produk; // cara menambahkan elemen baru ke array
     }
 
     public function cetak() {
@@ -115,6 +129,7 @@
 
   }
 
+
   $produk1 = new Komik("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000, 100);
   $produk2 = new Game("Uncharted", "Neil Druckmann", "Sony Computer", 250000, 50);
   // $produk3 = new Game("Uncharted", "Neil Druckmann", "Sony Computer", 250000, 50);
@@ -124,7 +139,6 @@
   $cetakProduk->tambahProduk($produk2);
   // $cetakProduk->tambahProduk($produk3);
   echo $cetakProduk->cetak();
-  
 
 
 ?>
